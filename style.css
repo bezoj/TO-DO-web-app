@@ -8,8 +8,8 @@ body {
     align-items: center;
     justify-content: center;
     margin: auto;
-    background: rgb(54, 217, 191);
-    background: linear-gradient(90deg, rgba(54, 217, 191, 1) 50%, rgba(0, 212, 255, 1) 100%);
+    background: rgb(82, 30, 112);
+    background: linear-gradient(90deg, rgb(85, 55, 55) 50%, rgb(29, 25, 25) 100%);
 }
 
 .to--title {
@@ -25,6 +25,7 @@ body {
     padding: 40px 20px;
     border-radius: 7px;
     width: 50%;
+    box-shadow: none;
 }
 
 .to--searching {
@@ -48,7 +49,7 @@ body {
     border: none;
     border-radius: 5px;
     color: white;
-    background-color: rgb(153, 81, 221);
+    background-color: #ff5945;
 }
 
 .to--list {
@@ -60,7 +61,7 @@ body {
     flex-direction: column-reverse;
     list-style-type: none;
     padding-left: 0;
-    padding: 20px 0px;
+    padding: 0px 0px;
 }
 
 .div--li {
@@ -85,6 +86,30 @@ body {
     padding: 10px;
     background-color: rgb(235, 235, 235);
     width: 100%;
+    margin: 5px 0;
+    position: relative;
+}
+
+.list--ul li::before {
+    margin: 0px 7px;
+    content: "";
+    background: url(images/unchecked.png);
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.list--ul li.checked {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.list--ul li.checked::before {
+    background-image: url(images/checked.png);
 }
 
 
@@ -108,10 +133,34 @@ body {
     padding: 10px 20px;
     border: none;
     border-radius: 3px;
-    background-color: rgb(153, 81, 221);
+    background-color: #ff5945;
     color: white;
 }
 
 .fa-solid .fa-trash {
     height: 500px;
+}
+
+.check-box {
+    margin: 0px 5px;
+}
+
+span {
+    position: absolute;
+    right: 0;
+    background-color: rgb(214, 214, 214);
+    font-weight: bold;
+    color: rgb(168, 168, 168);
+    padding: 10px 20px;  
+    cursor: pointer;
+}
+
+span:hover {
+    background-color: #ff5945;
+    color: white;
+    transition: 0.3s ease-out;
+}
+
+.span-check {
+    
 }
